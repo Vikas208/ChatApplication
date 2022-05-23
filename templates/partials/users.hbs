@@ -1,0 +1,35 @@
+<form
+  class="chat_list"
+  style="cursor: pointer;
+ 
+    border-bottom-width: 2px;"
+  action="/app/getMessage/"
+  method="get"
+>
+  <div class="chat_people d-flex justify-content-center align-items-center">
+    <div class="chat_img">
+      <img
+        src="https://ptetutorials.com/images/user-profile.png"
+        alt={{this.name}}
+      />
+    </div>
+    <button
+      class="chat_ib"
+      type="submit"
+      style="border: none;
+    background: transparent;
+    text-align: left;"
+    >
+      <input
+        type="email"
+        value={{this.mail}}
+        readonly
+        name="mail"
+        style="background-color: transparent;border:none;outline:none;user-select: none;cursor:pointer"
+      />
+
+      <input type="text" name="id" value={{this.id}} hidden readonly />
+      <input type="text" name="name" value={{this.name}} hidden readonly />
+    </button>
+  </div>
+</form>
